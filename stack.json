@@ -7,8 +7,23 @@
         }
     },
     "Resources": {
+        "CDKMetadata": {
+            "Metadata": {
+                "aws:cdk:path": "Szakdolgozat/CDKMetadata/Default"
+            },
+            "Properties": {
+                "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPSMzPTM1RMLC/WTU7J1s3JTNKrDi5JTM7WAQrFpyYX6VUHpRbkF2eW5BdV6jin5SF4tRBucX5pUXJqrU5AZUlGfp6+sZ6hoZ6BYlZxZqZuUWleSWZuql4QhAYA3cPEW2wAAAA="
+            },
+            "Type": "AWS::CDK::Metadata"
+        },
         "Szakdolgozat7E3C5AC1": {
             "DeletionPolicy": "Retain",
+            "Metadata": {
+                "aws:cdk:path": "Szakdolgozat/Szakdolgozat/Resource"
+            },
+            "Properties": {
+                "RepositoryName": "base"
+            },
             "Type": "AWS::ECR::Repository",
             "UpdateReplacePolicy": "Retain"
         }

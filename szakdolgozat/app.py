@@ -1,7 +1,7 @@
 import json
 import cfn_flip
 
-from aws_cdk import App, Stack
+from aws_cdk import App, Stack, Environment
 
 from constructs import Construct
 
@@ -10,8 +10,8 @@ from ecr import Ecr
 
 class SzakdolgozatStack(Stack):
     def __init__(self, scope: Construct, construct_id: str = "Szakdolgozat", **kwargs) -> None:
-        super().__init__(scope, construct_id, **kwargs)
-        self.main_ecr = Ecr(self, construct_id)
+        super().__init__(scope, construct_id, env=Environment(region="eu-central-1"), **kwargs)
+        self.main_ecr = Ecr(self, construct_id, repository_name="base")
 
 
 if __name__ == '__main__':
