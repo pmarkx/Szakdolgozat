@@ -19,9 +19,10 @@ setuptools.setup(
     packages=setuptools.find_packages(where="szakdolgozat"),
 
     install_requires=[
-        "aws-cdk.core==1.89.0",
+        "aws-cdk-lib>=2.0.0",
+        "constructs>=10.0.0",
+        "aws-cdk.aws-codestar-alpha>=2.0.0alpha1",
     ],
-
     python_requires=">=3.6",
 
     classifiers=[
