@@ -22,6 +22,7 @@ setuptools.setup(
         "aws-cdk-lib>=2.0.0",
         "constructs>=10.0.0",
         "aws-cdk.aws-codestar-alpha>=2.0.0alpha1",
+        "cfn-flip"
     ],
     python_requires=">=3.6",
 
