@@ -1,11 +1,12 @@
-#!/usr/bin/env python3
+import json
 
-from aws_cdk import core
-
+from aws_cdk import App
 from szakdolgozat.szakdolgozat_stack import SzakdolgozatStack
 
-
-app = core.App()
-SzakdolgozatStack(app, "szakdolgozat")
-
-app.synth()
+if __name__ == '__main__':
+    app = App()
+    SzakdolgozatStack(app, "szakdolgozat")
+    with open("stack.json", "w") as outfile:
+        for stack in app.synth().stacks:
+            outfile.write(json.dumps(stack.template, indent=4, sort_keys=True))
+    print("done")
